@@ -1,0 +1,15 @@
+# Ignore the virtual environment (where your libraries are)
+venv/
+env/
+.env
+
+# Ignore Python compiled files
+__pycache__/
+*.pyc
+
+# Ignore Mac/Windows system files
+.DS_Store
+Thumbs.db
+
+# (Optional) If your dataset is huge (over 100MB), ignore it. 
+# But for your heart.csv, it is small, so it is okay to upload.
