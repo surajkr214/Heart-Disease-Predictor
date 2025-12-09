@@ -1,23 +1,70 @@
-# ❤️ Heart Disease Prediction App
+# 🫀 Heart Disease Predictor: Intelligent Cardiac Risk Assessment
 
-A machine learning application that predicts the risk of heart disease based on patient clinical data.
+[![Python](https://img.shields.io/badge/Python-3.9-blue?style=flat&logo=python&logoColor=white)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=Streamlit&logoColor=white)](https://streamlit.io/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi)](https://fastapi.tiangolo.com/)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)](https://www.docker.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## 📊 Overview
-This project uses the **K-Nearest Neighbors (KNN)** algorithm trained on the UCI Heart Disease dataset. It features an interactive **Streamlit** dashboard that allows users to input medical metrics via sliders and receive real-time risk assessments.
+> **A full-stack Machine Learning solution for real-time heart disease risk prediction, featuring a dynamic tuning dashboard and a production-grade API.**
 
-## 🚀 Features
-- **Interactive Interface**: User-friendly sliders for data input.
-- **Real-time Prediction**: Instant classification (Healthy vs. Potential Heart Disease).
-- **Probability Score**: Displays the model's confidence percentage.
+---
 
-## 🛠️ Tech Stack
-- **Python**
-- **Streamlit** (Frontend)
-- **Scikit-Learn** (Machine Learning)
-- **Pandas & NumPy** (Data Processing)
+## 🔗 Live Demo
+- **Interactive Dashboard (Streamlit):** [https://suraj-heart-guard.streamlit.app](INSERT_YOUR_STREAMLIT_LINK_HERE)
+- **Prediction API (Render):** [https://suraj-heart-api.onrender.com/docs](INSERT_YOUR_RENDER_LINK_HERE)
 
-## 💻 How to Run Locally
+---
 
-1. Clone the repository:
-   ```bash
-   git clone [https://github.com/YOUR-USERNAME/Heart-Disease-Prediction.git](https://github.com/YOUR-USERNAME/Heart-Disease-Prediction.git)
+## 📖 Project Overview
+HeartGuard AI is designed to assist medical professionals in triaging patients for potential heart disease. Unlike static models, this system provides a **dual-interface solution**:
+
+1.  **For Clinicians (Frontend):** An intuitive **Streamlit Dashboard** allowing for patient data entry, visualization of risk factors, and real-time hyperparameter tuning ("Model Doctor").
+2.  **For Developers (Backend):** A high-performance **FastAPI endpoint** deployed via Docker, serving the optimized K-Nearest Neighbors (KNN) model for integration into hospital systems.
+
+The core algorithm achieves **~91% accuracy** (at K=7) on the UCI Heart Disease dataset, outperforming standard baseline models.
+
+---
+
+## 🚀 Key Features
+
+### 1. 🏥 Prediction Clinic
+- User-friendly sliders for inputting 13 clinical features (Age, Cholesterol, Thalach, etc.).
+- Real-time classification (Healthy vs. Disease) with confidence probability scores.
+- "Traffic Light" system: Green for Healthy, Red for High Risk.
+
+### 2. ⚙️ The "Model Doctor" (Dynamic Tuning)
+- **Interactive Hyperparameter Tuning:** Users can adjust the `K` value (Number of Neighbors) in real-time.
+- **Visual Analytics:** Live plotting of Accuracy vs. K-Value to demonstrate model stability.
+- **Auto-Recommendation:** The system automatically flags `K=7` as the optimal setting for this dataset.
+
+### 3. 📊 Data Analytics Dashboard
+- Exploratory Data Analysis (EDA) charts integrated directly into the app.
+- Correlation heatmaps and distribution plots to understand underlying risk factors.
+
+---
+
+## 🛠️ Tech Stack & Architecture
+
+| Component | Technology | Description |
+| :--- | :--- | :--- |
+| **Model** | Scikit-Learn | K-Nearest Neighbors (KNN) with StandardScaler. |
+| **Frontend** | Streamlit | Interactive web interface & visualization (Seaborn/Matplotlib). |
+| **Backend** | FastAPI | High-speed REST API for inference. |
+| **Container** | Docker | Containerized deployment for consistent runtime. |
+| **Hosting** | Render & Streamlit Cloud | CI/CD automated deployment. |
+
+---
+
+## 💻 Installation & Local Usage
+
+To run this project on your local machine:
+
+### 1. Clone the Repository
+```bash
+git clone [https://github.com/surajkr214/heart-disease-predictor.git](https://github.com/surajkr214/heart-disease-predictor.git)
+cd heart-disease-predictor
+
+## 🔗 Live Demo
+- **Interactive Dashboard (Streamlit):** [https://suraj-heart-guard.streamlit.app](https://suraj-heart-guard.streamlit.app)
+- **Prediction API (Render):** [https://suraj-heart-api.onrender.com/docs](https://suraj-heart-api.onrender.com/docs)
